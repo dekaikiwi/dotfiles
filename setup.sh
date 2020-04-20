@@ -5,6 +5,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 FILES=".tmux.conf
 .vimrc"
 
+# TODO: Install all required tools here instead of checking every time. (apt-get will just ignore anything that is already installed)
+sudo apt-get -y install curl
+
 for f in $FILES
 do
 	if [ -L "$HOME/$f" ]; then
