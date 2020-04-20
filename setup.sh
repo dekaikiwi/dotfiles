@@ -46,3 +46,12 @@ do
 		fi
 	fi
 done
+
+# Set up zsh
+
+if ! [ -x "$(command -v zsh)" ]; then
+  echo "Install zsh and set as default shell..."
+  sudo apt-get install zsh
+  chsh -s /usr/bin/zsh 
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi

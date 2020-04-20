@@ -173,3 +173,8 @@ let g:syntastic_check_on_wq = 0
 set splitbelow
 
 set number
+filetype plugin on
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
