@@ -6,7 +6,7 @@ FILES=".tmux.conf
 .vimrc"
 
 # TODO: Install all required tools here instead of checking every time. (apt-get will just ignore anything that is already installed)
-sudo apt-get -y install curl
+sudo apt-get -y install curl vim tmux
 
 for f in $FILES
 do
@@ -31,20 +31,7 @@ do
 
         echo "$f: Installing Plugins..."
 	
-      	if ! [ -x "$(command -v vim)" ]; then
-	      	echo "$f: Installing Vim..."
-	      	sudo apt-get install vim
-      	fi
-
         vim +PluginInstall +qall
-      fi
-
-      # tmux setup
-      if [ "$f" == ".tmux.conf" ]; then
-        if ! [ -x "$(command -v tmux)" ]; then
-          echo "Installing tmux..."
-          sudo apt-get install tmux
-        fi
       fi
 		fi
 	fi
@@ -55,6 +42,5 @@ done
 if ! [ -x "$(command -v zsh)" ]; then
   echo "Install zsh and set as default shell..."
   sudo apt-get install zsh
-  chsh -s /usr/bin/zsh 
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
