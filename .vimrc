@@ -34,6 +34,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'ycm-core/YouCompleteMe'
 Bundle 'canadaduane/VimKata'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
@@ -178,3 +181,10 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+"" UltiSnips config
+
+"" TODO: Find a good key combination for expansion
+let g:UltiSnipsExpandTrigger="<Del>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"

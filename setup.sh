@@ -7,7 +7,7 @@ FILES=".tmux.conf
 .zshrc"
 
 # TODO: Install all required tools here instead of checking every time. (apt-get will just ignore anything that is already installed)
-sudo apt-get -y install curl vim tmux mono-devel build-essential cmake vim python3-dev golang npm nodejs jq
+sudo apt-get -y install curl vim vim-nox tmux mono-devel build-essential cmake vim python3-dev golang npm nodejs jq
 
 for f in $FILES
 do
@@ -33,6 +33,8 @@ do
         echo "$f: Installing Plugins..."
 	
         vim +PluginInstall +qall
+
+        python3 ~/vim/bundle/YouCompleteMe/install.py --all
       fi
 		fi
 	fi
