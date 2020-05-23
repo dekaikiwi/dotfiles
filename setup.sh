@@ -3,10 +3,11 @@
 # https://stackoverflow.com/a/246128
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 FILES=".tmux.conf
-.vimrc"
+.vimrc
+.zshrc"
 
 # TODO: Install all required tools here instead of checking every time. (apt-get will just ignore anything that is already installed)
-sudo apt-get -y install curl vim tmux
+sudo apt-get -y install curl vim tmux mono-devel build-essential cmake vim python3-dev golang npm nodejs
 
 for f in $FILES
 do
