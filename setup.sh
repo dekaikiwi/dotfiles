@@ -45,5 +45,5 @@ done
 if ! [ -x "$(command -v zsh)" ]; then
   echo "Install zsh and set as default shell..."
   sudo apt-get install zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --keep-zshrc
 fi
