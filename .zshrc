@@ -106,3 +106,6 @@ ip_prompt_info () {
 if [[ -f ip_region.txt ]]; then
    export PROMPT+=' $(ip_prompt_info) $ '
 fi
+
+# Initialize custom key mapping
+xmodmap ~/.Xmodmap
