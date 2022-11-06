@@ -1,0 +1,3 @@
+# Long Format List, with hidden files.
+alias l="ls -la"
+alias ..="cd .."

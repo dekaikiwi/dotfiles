@@ -1,0 +1,5 @@
+function hsearch() {
+  history | grep "$1"
+}
+
+
