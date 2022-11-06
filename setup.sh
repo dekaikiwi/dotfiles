@@ -7,7 +7,8 @@ FILES=".tmux.conf
 .zshrc
 .Xmodmap
 .alias
-.function"
+.function
+.gitconfig"
 
 # TODO: Install all required tools here instead of checking every time. (apt-get will just ignore anything that is already installed)
 sudo apt-get -y install curl vim vim-nox tmux mono-devel build-essential cmake vim python3-dev golang npm nodejs jq
