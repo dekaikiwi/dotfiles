@@ -2,4 +2,6 @@ function hsearch() {
   history | grep "$1"
 }
 
-
+function untar() {
+  tar -xvf "$1"
+}
