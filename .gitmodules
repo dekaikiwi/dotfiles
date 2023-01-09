@@ -1,0 +1,3 @@
+[submodule "Yubico-Passwordless-Login-with-Linux"]
+	path = Yubico-Passwordless-Login-with-Linux
+	url = https://github.com/vanderblugen/Yubico-Passwordless-Login-with-Linux

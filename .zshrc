@@ -115,6 +115,6 @@ if [[ -f ip_region.txt ]]; then
 fi
 
 # Initialize custom key mapping
-xmodmap ~/.Xmodmap
+# xmodmap ~/.Xmodmap
 
-
+export PATH=$PATH:$HOME/.local/bin

@@ -25,6 +25,7 @@ UTILS=(
   cmake
   vim
   python3-dev
+  python3-pip
   golang
   npm
   nodejs
