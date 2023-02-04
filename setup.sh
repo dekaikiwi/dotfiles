@@ -37,8 +37,6 @@ echo "##################################"
 echo "###### Install Dependencies ######"
 echo "##################################"
 
-sleep 1
-
 utilsToInstall=()
 utilsInstalled=()
 
