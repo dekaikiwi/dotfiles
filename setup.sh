@@ -17,6 +17,7 @@ FILES=(
 # List of dependent libs that should be installed with apt-get
 UTILS=(
   curl
+  fzf
   vim
   vim-nox
   tmux
@@ -76,7 +77,9 @@ do
 			echo "[SKIPPED] $f already exits: symlink was not created"
 		else
 			ln -s $DIR/$f "$HOME/$f"
-     
+
+      ln -s $DIR/scripts $HOME/.local/bin
+
       # Vim Setup 
       if [ "$f" == ".vimrc" ]; then
         echo "$f: Cloning Vundle..."
