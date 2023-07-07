@@ -1,3 +1,6 @@
 [submodule "Yubico-Passwordless-Login-with-Linux"]
 	path = Yubico-Passwordless-Login-with-Linux
 	url = https://github.com/vanderblugen/Yubico-Passwordless-Login-with-Linux
+[submodule "nvim-config"]
+	path = nvim-config
+	url = https://github.com/dekaikiwi/nvim-config
