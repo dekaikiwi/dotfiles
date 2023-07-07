@@ -69,36 +69,28 @@ sleep 1
 
 for f in ${FILES[@]};
 do
-	if [ -L "$HOME/$f" ]; then
-		echo "[SKIPPED] Symlink for $f already exists in home dir"
-	else
-		echo "$f: symlink does not currently exist. Creating symlink..."
+    if [ -L "$HOME/$f" ]; then
+        echo "[SKIPPED] Symlink for $f already exists in home dir"
+    else
+        echo "$f: symlink does not currently exist. Creating symlink..."
 
-		if [ -f "$HOME/$f" ]; then
-			echo "[SKIPPED] $f already exits: symlink was not created"
-		else
-			ln -s $DIR/$f "$HOME/$f"
-
-      ln -s $DIR/scripts $HOME/.local/bin
-
-      # Vim Setup 
-      if [ "$f" == ".vimrc" ]; then
-        echo "$f: Cloning Vundle..."
-        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-        echo "$f: Downloading and Installing Pathogen...."
-        mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-        curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim 
-
-        echo "$f: Installing Plugins..."
-	
-        vim +PluginInstall +qall
-
-        python3 ~/vim/bundle/YouCompleteMe/install.py --all
-      fi
-		fi
-	fi
+        if [ -f "$HOME/$f" ]; then
+            echo "[SKIPPED] $f already exits: symlink was not created"
+        else
+            ln -s $DIR/$f "$HOME/$f"
+        fi
+    fi
 done
+
+echo "##################"
+echo "##### NeoVim #####"
+echo "##################"
+
+if [ ! -d "$HOME/.config/nvim" ]; then
+    ln -s $DIR/nvim-config $HOME/.config/nvim
+    
+    nvim +PackerSync +qall
+fi
 
 # Set up zsh
 echo "#####################"
