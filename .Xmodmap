@@ -1,6 +1,0 @@
-! Option Key is now Alt Key (Previously Super Key/Multiply)
-keycode  63 = Alt_L Meta_L Alt_L Meta_L
-! Command Key is now Left Control Key (Previously Mapped to Alt)
-keycode  64 = Control_L NoSymbol Control_L
-! Caps Lock Key is now Multiply Key (Previously Caps Lock)
-keycode  66 = KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply XF86ClearGrab

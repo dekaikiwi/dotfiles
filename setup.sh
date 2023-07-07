@@ -32,6 +32,7 @@ UTILS=(
   nodejs
   jq
   net-tools
+  nvim
 )
 
 echo "##################################"
