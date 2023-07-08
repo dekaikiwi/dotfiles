@@ -4,3 +4,5 @@
 
 [apply]
   whitespace = fix
+[pull]
+	rebase = true

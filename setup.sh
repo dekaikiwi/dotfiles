@@ -60,6 +60,9 @@ else
   sudo apt-get -y install ${utilsToInstall[*]} 
 fi
 
+# Install Tmux Plugin Manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # TODO: Install all required tools here instead of checking every time. (apt-get will just ignore anything that is already installed)
 
 echo "############################"
